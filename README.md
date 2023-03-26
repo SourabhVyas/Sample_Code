@@ -1,2 +1,2 @@
 # Sample_Code
-sample of code
+code samples from a project.
