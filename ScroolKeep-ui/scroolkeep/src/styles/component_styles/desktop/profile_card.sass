@@ -1,0 +1,142 @@
+
+.profile-card, .edit-profile-card
+    padding-bottom: 10px
+    margin-bottom: 10px
+    border-bottom: 0.5px solid $border-color
+
+.banner
+    width: 100%
+    max-height: 200px
+    z-index: -1
+    overflow: hidden
+    img
+        width: 100%
+
+.row-1
+    display: grid
+    grid-template-columns: 50% 50%
+
+.profile-pic
+    width: 145.6px
+    height: 145.6px
+    border-radius: 50%
+    padding: 3px
+    overflow: hidden
+    position: relative
+    margin-top: -68px
+    margin-left: 10px
+    background-color: $background-color-light
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+
+.follow, .following
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 20px
+    font-weight: bold
+    width: max-content
+    height: max-content
+    display: block
+    margin-right: 32px
+    margin-left: auto
+    margin-top: 15px
+    padding: 15px 20px
+    cursor: pointer
+    border-radius: 30px
+
+    border: none
+
+.follow
+    color: rgb(255, 255, 255)
+    background: $button-color-light-hover
+
+.following
+    color: rgb(9, 9, 9)
+    background: $background-color-light-pop
+
+.row-2, .row-3,
+    padding: 8px 25px
+
+.name
+    font-family: $font-veranda
+    font-size: 25px
+    font-weight: bold
+
+.handle
+    font-family: $font-dancing
+    color: $light-font
+    font-size: 17px
+
+.bio
+    font-family: $font-veranda
+    font-size: 15px
+    padding-top: 10px
+
+.row-4
+    display: grid
+    grid-template-columns: 20% 20%
+    padding: 15px 25px
+
+.follows, .followers
+    font-family: $font-dancing
+    font-size: 15px
+    color: $light-font
+
+.count
+    display: inline-block
+    margin-left: 5px
+    font-family: $font-franklin
+    color: rgb(0, 0, 0)
+
+.edit-profile-card-button
+    margin: 30px 20% auto auto
+    border-radius: 50%
+    background-color: $button-color-light
+    width: 45px
+    height: 45px
+    display: flex
+    align-items: center
+    svg
+        display: block
+        margin: 0 auto
+        width: 20px
+        fill: white
+    &:hover
+        cursor: pointer
+        background-color: $button-color-light-hover
+
+.edit-profile-card
+    input
+        border: none
+        width: 50%
+        outline: none
+    label
+        &:hover
+            cursor: pointer
+            img
+                filter: brightness(50%)
+
+    .finalize
+        display: grid
+        grid-template-columns: 60% 20% 20%
+        padding: 20px
+
+    .update-button, .cancel-button
+        border-radius: 50%
+
+        width: 45px
+        height: 45px
+        border: none
+        cursor: pointer
+        svg
+            width: 20px
+            fill: white
+    .update-button
+        background-color: $button-color-light
+        &:hover
+            background-color: rgb(40, 229, 2)
+    .cancel-button
+        background-color: rgb(0,0,0)
+        &:hover
+            background-color: rgb(247, 16, 16)

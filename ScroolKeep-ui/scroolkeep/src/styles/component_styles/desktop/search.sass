@@ -1,0 +1,43 @@
+
+.search-component
+    width: 60%
+    margin: 10% auto auto auto
+    display: grid
+    grid-template: 40px auto / auto 20%
+    overflow: hidden
+    border-radius: 10px
+    border: 1px solid $border-color
+    outline: none
+
+.search-input
+    border-radius: 10px
+    padding: 5px 0 5px 15px
+    border: none
+    outline: none
+    input
+        font-family: $font-veranda
+        color: rgb(83, 79, 79)
+        font-size: 18px
+        height: 100%
+        width: 100%
+        border: none
+        outline: none
+
+.search-button
+    cursor: pointer
+    border: none
+    width: 100%
+    text-align: center
+    &:hover
+        background-color: $background-color-light-pop
+        svg
+            fill: $button-color-light-hover
+    svg
+        margin: auto
+        height: 100%
+        width: 20px
+        fill: rgb(0, 0, 0)
+
+.search-suggestions
+    border: none
+    width: 100%

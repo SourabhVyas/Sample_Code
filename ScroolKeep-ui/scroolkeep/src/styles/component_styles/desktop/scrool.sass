@@ -1,0 +1,263 @@
+
+// scrool base
+%scrool-defaults
+    max-width: 100%
+    border-bottom: 0.5px solid
+    border-color: $border-color
+    font-family: $font-veranda
+
+// Mixin for the ligher font 
+@mixin light-font($font-size: 15px, $font-weight: 400, $line-height: 20px,$display: inline-block)
+    font-family: $font-dancing
+    color: $light-font
+    font-size: $font-size
+    font-weight: $font-weight
+    line-height: $line-height
+    display: $display
+
+@mixin scrool-footer-row($min-height:40px)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr min-content
+    column-gap: 8px
+    min-height: $min-height
+
+// Scrool container when the scrool is a list item
+.scrool-container
+    @extend %scrool-defaults !optional
+    display: grid
+    grid-template-columns: 1% 10% 89%
+    padding-top: 8px
+    padding-bottom: 8px
+
+.scrool-media
+    border-radius: 10px
+    margin-bottom: 10px
+    margin-left: 0
+    margin-right: auto
+    display: block
+    width: 100%
+
+.scrool-light-font
+    @include light-font()
+
+.scrool-author-handle
+    @include light-font($line-height:18px)
+
+.scrool-display-name
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+
+.scrool-time-ago
+    @include light-font($line-height:18px)
+
+.scrool-datetime
+    @include light-font($line-height:18px)
+    padding-left: 16px
+    margin-top: 20px
+
+.author
+    display: grid
+    grid-template-columns: repeat(4, max-content) auto
+    column-gap: 4px
+
+.scrool-author-pic
+    img
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        &:hover
+            filter: brightness(50%)
+            cursor: pointer
+
+// Header
+.scrool-header
+    display: grid
+    grid-template-columns: auto auto
+    padding-right: 16px
+    max-height: 20px
+
+// Body
+.scrool-body
+    padding-right: 10%
+    cursor: pointer
+    p
+        word-wrap: break-word
+
+// Footer
+.scrool-footer
+    display: grid
+
+// Creation Time and Views
+.scrool-footer-row-1
+    display: grid
+    min-height: 50px
+
+// Footer rows for showing stats, icons ...
+.scrool-footer-row-n
+    @include scrool-footer-row()
+
+.scrool-reply
+    display: grid
+    grid-template-columns: repeat(2, min-content)
+    column-gap: 3px
+
+.scrool-reply-stat
+    margin: auto
+    line-height: 20px
+
+.scrool-like
+    display: grid
+    grid-template-columns: repeat(2, max-content)
+    column-gap: 3px
+
+.scrool-like-stat
+    margin: auto
+    line-height: 20px
+
+.scrool-share
+    display: grid
+    grid-template-columns: repeat(2, max-content)
+    column-gap: 3px
+
+.share-message
+    font-family: $font-franklin
+    font-size: 16px
+    background-color: rgba(6, 63, 233, 0.758)
+    color: white
+    text-align: center
+    padding: 15px 12px
+
+// Icons
+// Icon properties (like, reply, delete , share ...)
+$scroolIconWidth: 2em
+$scroolIconHeight: $scroolIconWidth
+%scrool-icons
+    border: 0px
+    width: $scroolIconWidth
+    height: $scroolIconHeight
+    margin: auto
+
+.scrool-reply-icon
+    @extend %scrool-icons !optional
+    border-radius: 50%
+    svg
+        display: block
+        margin: 19% auto auto auto
+        width: 1.10em
+        fill: none
+        stroke: black
+        stroke-width: 60px
+    &:hover
+        background-color: rgb(202, 229, 250)
+        cursor: pointer
+        svg
+            fill: $button-color-light-hover
+            stroke: $button-color-light-hover
+
+.scrool-like-icon
+    @extend %scrool-icons !optional
+    border-radius: 50%
+    svg
+        display: block
+        margin: 19% auto auto auto
+        width: 1.10em
+        fill: none
+        stroke: black
+        stroke-width: 60px
+    &:hover
+        background-color: rgb(242, 190, 190)
+        cursor: pointer
+        svg
+            fill: rgb(255, 2, 2)
+            stroke: rgb(255, 2, 2)
+
+svg.liked
+    fill: rgb(255, 2, 2)
+    stroke: rgb(255, 2, 2)
+
+.scrool-share-icon
+    @extend %scrool-icons !optional
+    border-radius: 50%
+    svg
+        display: block
+        margin: 15% auto auto auto
+        width: 1.10em
+        fill: none
+        stroke: black
+        stroke-width: 35px
+    &:hover
+        width: $scroolIconWidth 0.2em
+        background-color: rgb(217, 255, 202)
+        cursor: copy
+        svg
+            width: 1.2em
+            stroke: rgb(12, 124, 0)
+
+.menu-container
+    display: grid
+    grid-template-columns: 85% 15%
+
+.menu-toggle
+    @extend %scrool-icons !optional
+    width: 1.6em
+    height: 1.6em
+    padding: 3px
+    margin-right: 0
+    margin-top: 0
+    cursor: pointer
+    border-radius: 50%
+    &:hover
+        background-color: $background-color-light-pop
+
+.menu
+    width: max-content
+    margin-right: 3%
+    margin-left: auto
+    li
+        position: relative
+        cursor: pointer
+        z-index: 1
+        background-color: $background-color-light
+
+.scrool-delete
+    width: max-content
+    svg
+        display: inline-block
+        width: 17px
+        margin: auto 10px -2px auto
+
+// Highlighted scrool after selecting
+.main-scrool
+    @extend %scrool-defaults !optional
+    font-size: 17px
+    padding-top: 5px
+    .scrool-content
+        padding-left: 16px
+        padding-right: 16px
+    .author
+        display: grid
+        grid-template-columns: repeat(2, max-content) auto
+        padding-left: 5px
+        display: block
+    .scrool-header
+        display: grid
+        grid-template-columns: 10% 60% 30%
+        max-height: 50px
+        padding-left: 16px
+        padding-right: 16px
+    .scrool-footer-row-n
+        @include scrool-footer-row($min-height: 50px)
+        border-top: 0.5px solid
+        border-color: $border-color
+    .scrool-media
+        border-radius: 10px
+        margin: 10px auto 10px 10%
+        display: block
+        width: 80%
+    .menu-container
+        display: grid
+        grid-template-columns: 80% 20%
+    .menu-toggle
+        margin-right: 18px

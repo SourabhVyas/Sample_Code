@@ -1,0 +1,94 @@
+
+.register
+    width: 50%
+    min-width: 250px
+    max-width: 450px
+    display: grid
+    grid-template-rows: 50px 50px auto auto
+    row-gap: 15px
+    padding: 50px 40px
+    background-color: white
+    margin: 10% auto
+
+.email-input, .password-input, .display-name-input, .handle-input
+    padding: 10px
+    font-size: 16px
+    border: none
+    border-bottom: 1px solid $border-color
+
+.register-button
+    width: 50%
+    color: white
+    background-color: $button-color-light
+    padding: 10px
+    border-radius: 10px
+    font-size: 18px
+    font-family: $font-veranda
+    outline: none
+    border: none
+    cursor: pointer
+    margin: auto 1% auto auto
+    float: right
+    &:hover
+        color: white
+        background-color: $button-color-light-hover
+        transition-duration: 0.3s
+
+.previous-button, .next-button
+    display: grid
+    width: max-content
+    column-gap: 3px
+    padding: 10px
+    border: none
+    outline: none
+    background-color: white
+    svg
+        width: 16px
+        display: inline-block
+        margin: auto auto
+        border-radius: 50%
+        padding: 5px
+        fill: rgb(192, 188, 188)
+    p
+        font-size: 16px
+        font-family: $font-veranda
+        color: rgb(192, 188, 188)
+        display: inline-block
+        line-height: 10px
+    &.live
+        cursor: pointer
+        p
+            color: black
+        svg
+            fill: black
+        &:hover
+            transition-duration: 0.3s
+            svg
+                fill: $button-color-light-hover
+                background-color: $background-color-light-pop
+            p
+                color: $button-color-light-hover
+
+.next-button
+    grid-template-columns: 70% 30%
+    margin-left: auto
+    margin-right: 0
+
+.previous-button
+    float: left
+    grid-template-columns: 30% 70%
+
+.signin-button
+    cursor: pointer
+    border: none
+    outline: none
+    padding: 10px
+    border-radius: 15px
+    color: rgba(38, 38, 38, 0.575)
+    text-decoration: underline
+    text-align: center
+    font-size: 17px
+    font-family: $font-veranda
+    &:hover
+        color: $button-color-light-hover
+        transition-duration: 0.3s

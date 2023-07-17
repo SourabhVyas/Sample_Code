@@ -1,0 +1,67 @@
+
+.column-container
+    display: grid
+    grid-template-columns: 25fr $scrool-width 25fr
+    height: 100%
+    @media only screen and (max-width: 1250px)
+        grid-template-columns: 20fr $scrool-width 5fr
+        .feeds
+            display: none
+
+.scrool-region
+    border: 0.5px solid
+    border-color: #cad2de
+    border-top: none
+    overflow-y: scroll
+    &::-webkit-scrollbar
+        display: none
+
+.add-scrool-button
+    font-size: 20px
+    font-weight: bold
+    color: rgb(255, 255, 255)
+    width: 50%
+    display: block
+    margin-right: auto
+    margin-left: auto
+    margin-top: 20px
+    padding: 15px 20px
+    cursor: pointer
+    border-radius: 30px
+    background: $button-color-light
+    border: none
+    box-shadow: 1px 1px 10px #aaaaaa
+    &:hover
+        background-color: $button-color-light-hover
+        transition-duration: 0.2s
+
+.navigation
+    margin-left: auto
+    margin-right: auto
+    font-size: 20px
+    width: 80%
+    max-width: 500px
+    ul
+        height: 100%
+        border-radius: 10%
+        overflow: hidden
+    li
+        display: grid
+        grid-template-columns: 33% 67%
+        padding-top: 20px
+        padding-bottom: 20px
+        cursor: pointer
+        column-gap: 25px
+        &:hover, &.active
+            color: $button-color-light-hover
+            fill: $button-color-light-hover
+    svg
+        margin-right: 0
+        margin-left: auto
+        width: 23px
+
+.scrool-end
+    color: $light-font
+    display: block
+    margin: 25px auto 25px auto
+    text-align: center
