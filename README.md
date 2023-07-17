@@ -1,7 +1,7 @@
 `In Development`
 
 # ScroolKeep
-A microblogging site where you can post small snippets, media and interact with other similar users. The current version of the app can be tested at <a href="https://scroolkeep-76757.web.app/" target="_blank">ScroolKeep &#129125;</a>
+A microblogging site where you can post small snippets, media and interact with other similar users. The current version of the app can be tested at <a href="https://scroolkeep-76757.web.app/" target=_blank>ScroolKeep &#129125;</a>
 ### ScroolKeep 
 The `ScroolKeep` folder contains the server-side logic for the app. It used Django Framework along with Firebase for database and storage.
 
