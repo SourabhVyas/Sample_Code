@@ -1,7 +1,7 @@
 `In Development`
 
 # ScroolKeep
-A microblogging site where you can post small snippets, media and interact with other similar users. The current version of the app can be tested at <a href="https://scroolkeep-76757.web.app/" target=_blank>ScroolKeep &#129125;</a>
+A microblogging site where you can post small snippets, media and interact with other similar users. The current version of the app is available at <a href="https://scroolkeep-76757.web.app/" target=_blank>ScroolKeep &#129125;</a>
 ### ScroolKeep 
 The `ScroolKeep` folder contains the server-side logic for the app. It used Django Framework along with Firebase for database and storage.
 
@@ -21,13 +21,17 @@ The `ScroolKeep` folder contains the server-side logic for the app. It used Djan
   This django-app performs CRUD operations for the posts(scrools) on Firebase database and storage.
 
 
+The server-side code is hosted on [pythonanywhere](https://www.pythonanywhere.com/)
+
 ### ScroolKeep-UI
 `ScroolKeep-UI` contains the client-side code for the app. It uses React framework.
 
 #### Desktop
-![desktop](https://github.com/SourabhVyas/Sample_Code/assets/73056660/33065b91-a5d0-42e1-9481-330d1d843209)
+![desktop](https://github.com/SourabhVyas/Sample_Code/assets/73056660/38d769bf-5cfc-495e-ae4a-58179950f719)
+
 
 #### Mobile
-![mobile-view](https://github.com/SourabhVyas/Sample_Code/assets/73056660/6011ba1c-484a-4d73-99a1-a4c48dd72690)
+![mobile-view](https://github.com/SourabhVyas/Sample_Code/assets/73056660/3aa84891-f847-4e00-884a-0d5c3ff407ec)
 
+The client-side code is hosted using [Firebase hosting](https://firebase.google.com/docs/hosting)
 
