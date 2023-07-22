@@ -22,7 +22,6 @@ The `ScroolKeep` folder contains the server-side logic for the app. It used Djan
   This django-app performs CRUD operations for the posts(scrools) on Firebase database and storage.
 
 
-The server-side code is hosted on [pythonanywhere](https://www.pythonanywhere.com/)
 
 ### ScroolKeep-UI
 `ScroolKeep-UI` contains the client-side code for the app. It uses React framework.
@@ -33,6 +32,4 @@ The server-side code is hosted on [pythonanywhere](https://www.pythonanywhere.co
 
 #### Mobile
 ![mobile-view](https://github.com/SourabhVyas/Sample_Code/assets/73056660/3aa84891-f847-4e00-884a-0d5c3ff407ec)
-
-The client-side code is hosted using [Firebase hosting](https://firebase.google.com/docs/hosting)
 
